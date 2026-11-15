@@ -1,0 +1,10 @@
+{
+  "name": "GOD'S GRACE – నేటి దేవుని వాక్యం",
+  "short_name": "GOD'S GRACE",
+  "lang": "te",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f1e4",
+  "theme_color": "#285b35",
+  "description": "ప్రతిరోజూ తెలుగు దేవుని వాక్యం"
+}

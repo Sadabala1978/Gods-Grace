@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#285b35">
+<link rel="manifest" href="manifest.webmanifest">
+<title>GOD'S GRACE – నేటి దేవుని వాక్యం</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(150deg,#f5f1e4,#e6efdf);font-family:"Noto Sans Telugu",Gautami,sans-serif;color:#243b29}
+.wrap{max-width:760px;margin:auto;padding:20px 14px}.hero,.panel{background:#fff;border-radius:22px;padding:22px 18px;box-shadow:0 8px 28px #254b2918}
+.hero{text-align:center}.cross{font-size:34px}.brand{font:bold 30px Georgia,serif;letter-spacing:2px;color:#a47b28}.sub{font-size:20px;margin-top:8px;color:#285b35}.time{margin:12px auto 0;color:#66765f;font-size:14px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:17px 0}.actions button,.controls select{flex:1;min-width:135px;padding:12px;border-radius:12px;border:1px solid #cbd9c3;background:#fff;font:inherit;color:#29452d}
+.actions button.primary{background:#285b35;color:white;border:0}.controls{display:flex;gap:10px;margin-bottom:14px}.controls select{width:100%}
+.panel h2{font-size:18px;margin:0 0 12px}.qrbtn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:14px;border:0;border-radius:15px;background:#edf5e8;color:#245b2a;font:inherit;font-size:17px;cursor:pointer}
+.qr{width:58px;height:58px;flex:none}.verse{display:none;margin-top:16px;padding:17px;border:1px solid #d8e6d1;border-radius:15px;background:#fbfdf9;line-height:1.9;text-align:center}.verse p{font-size:22px;margin:6px 0;color:#263f25}.ref{font-weight:bold;color:#52764a}
+.calendar{width:100%;height:auto;border-radius:10px;border:1px solid #e2e5dc}.hint{font-size:13px;line-height:1.8;color:#6b7567;margin:14px 2px 0}.status{background:#fff8e8;border:1px solid #ead9aa;padding:12px;border-radius:12px;font-size:13px;line-height:1.7;margin-top:14px}.footer{text-align:center;color:#788575;font-size:12px;margin:20px 0}
+</style>
+</head>
+<body><main class="wrap">
+<header class="hero"><div class="cross">✝️</div><div class="brand">GOD'S GRACE</div><div class="sub">నేటి దేవుని వాక్యం</div><div class="time">ప్రతిరోజూ ఉదయం 6:00 గంటలకు</div></header>
+<div class="actions"><button class="primary" id="todayBtn">ఈ రోజు వాక్యం</button><button id="shareBtn">లింక్ షేర్ చేయండి</button><button id="notifyBtn">Notification అనుమతి</button></div>
+<section class="panel">
+<h2>🙏 QR గుర్తుపై క్లిక్ చేసి నమూనా వాక్యం చూడండి</h2>
+<button class="qrbtn" id="showVerse" type="button">
+<svg class="qr" viewBox="0 0 100 100" role="img" aria-label="QR తరహా గుర్తు"><rect width="100" height="100" rx="8" fill="white"/><g fill="#245b2a"><path d="M5 5h30v30H5zM65 5h30v30H65zM5 65h30v30H5z"/><path d="M12 12h16v16H12zM72 12h16v16H72zM12 72h16v16H12z" fill="white"/><path d="M17 17h6v6h-6zM77 17h6v6h-6zM17 77h6v6h-6zM43 5h8v8h-8zM43 21h8v8h-8zM39 39h8v8h-8zM55 39h8v8h-8zM71 43h8v8h-8zM87 43h8v8h-8zM43 55h8v8h-8zM59 55h8v8h-8zM75 59h8v8h-8zM43 71h8v8h-8zM55 79h8v8h-8zM71 75h8v8h-8zM87 87h8v8h-8z"/></g></svg>
+<span>నేటి దేవుని వాక్యం చూపించండి</span></button>
+<div class="verse" id="verseBox" aria-live="polite"><strong>ఈరోజు నమూనా వాక్యం</strong><p>యెహోవా నా కాపరి; నాకు లేమి కలుగదు.</p><div class="ref">కీర్తనలు 23:1</div></div>
+<p class="hint">గమనిక: పై వాక్యం నమూనా మాత్రమే. మీ క్యాలెండర్‌లోని ప్రతి తేదీ వాక్యాన్ని చదివి నిర్ధారించిన తర్వాత అసలు వాక్యాలతో భర్తీ చేస్తాం.</p>
+</section>
+<section class="panel" style="margin-top:15px"><h2 id="heading">2026 నెలవారీ క్యాలెండర్</h2><div class="controls"><select id="month" aria-label="నెల ఎంచుకోండి"></select></div><img id="calendar" class="calendar" src="images/month_01.jpg" alt="నెలవారీ తెలుగు బైబిల్ వాక్యాల క్యాలెండర్"></section>
+<div class="status"><strong>నోటిఫికేషన్ స్థితి:</strong> ఇది ప్రస్తుతం వెబ్‌సైట్ నమూనా. ఉదయం 6 గంటలకు అందరి ఫోన్‌లకు నోటిఫికేషన్ పంపడానికి సైట్‌ను HTTPSలో హోస్ట్ చేసి, Push server మరియు రోజువారీ scheduler జోడించాలి. QR తరహా గుర్తు ప్రస్తుతం వాక్యం చూపించే బటన్ మాత్రమే; ఇది స్కాన్ చేయగల QR కోడ్ కాదు.</div>
+<div class="footer">GOD'S GRACE · Every Day, God's Word</div></main>
+<script>
+const months=["జనవరి","ఫిబ్రవరి","మార్చి","ఏప్రిల్","మే","జూన్","జూలై","ఆగస్టు","సెప్టెంబర్","అక్టోబర్","నవంబర్","డిసెంబర్"];
+const sel=document.getElementById("month");
+months.forEach((m,i)=>{let o=document.createElement("option");o.value=i;o.textContent=m;sel.appendChild(o)});
+function showMonth(i){sel.value=i;document.getElementById("heading").textContent=months[i]+" 2026 – క్యాలెండర్";document.getElementById("calendar").src=`images/month_${String(i+1).padStart(2,"0")}.jpg`;}
+sel.addEventListener("change",()=>showMonth(+sel.value));showMonth(new Date().getMonth());
+document.getElementById("todayBtn").addEventListener("click",()=>{document.getElementById("verseBox").style.display="block";document.getElementById("verseBox").scrollIntoView({behavior:"smooth",block:"center"});});
+document.getElementById("showVerse").addEventListener("click",()=>{document.getElementById("verseBox").style.display="block";});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  navigator.serviceWorker.register("./sw.js").catch(()=>{});
+}
+document.getElementById("notifyBtn").addEventListener("click", async()=>{
+  if (!("Notification" in window)) { alert("ఈ బ్రౌజర్ Notifications‌కు మద్దతు ఇవ్వడం లేదు."); return; }
+  const permission = await Notification.requestPermission();
+  alert(permission === "granted" ? "అనుమతి వచ్చింది. రోజువారీ Push పంపడానికి ఇంకా Push Server అనుసంధానం అవసరం." : "Notification అనుమతి ఇవ్వబడలేదు.");
+});
+document.getElementById("shareBtn").addEventListener("click",async()=>{const data={title:"GOD'S GRACE",text:"నేటి దేవుని వాక్యం – GOD'S GRACE"};if(navigator.share){try{await navigator.share(data)}catch(e){}}else{alert("ఈ Websiteను Hosting చేసిన తర్వాత దాని లింక్‌ను ఇక్కడి నుంచి Share చేయవచ్చు.");}});
+</script></body></html>
